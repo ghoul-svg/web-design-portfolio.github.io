@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practical 6 (Flexbox)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .top-news {
+      display: flex;
+      flex-direction: row;
+      padding: 1rem;
+      background-image: url("airpl.jpeg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .top-news img {
+      width: 0px;
+      height: 0px;
+    }
+
+    .top-news-content {
+      margin-left: 1rem;
+      color: #ffffff;
+    }
+
+    .top-news-heading {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+     
+    }
+
+    .top-news-paragraph {
+      margin-bottom: 1rem;
+    }
+
+    .news-section {
+      display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 1rem;
+    }
+
+    .news-preview {
+      margin: 0 1rem 1rem 0;
+      padding: 1rem;
+      border: 1px solid #ccc;
+        }
+
+        .news-preview img {
+      width: 360px;
+      height: 230px;
+    }
+
+    .news-preview-heading {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .news-preview-meta {
+      font-size: 0.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 1024px) {
+      .container {
+        flex-direction: row;
+      }
+
+      .top-news {
+        flex-direction: column;
+      }
+
+      .top-news-content {
+        margin-top: 1rem;
+      }
+
+      .news-section {
+        flex-direction: column;
+      }
+
+      .news-preview {
+        width: 100%;
+        margin: 0 0 1rem 0;
+      }
+
+      .news-preview-excerpt {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav menu {
+        order: -1;
+      }
+      .nav-menu {
+      background-color: #f1f1f1;
+      padding: 1rem;
+
+    }
+    }
+    
+    h3{
+      padding-left: 1%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="top-news">
+      <img src="airpl.jpeg" alt="News Image 1">
+      <div class="top-news-content">
+        <h2 class="top-news-heading">Top News</h2>
+        <p class="top-news-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget lacus eget nunc tincidunt laoreet.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="news-section">
+      <div class="news-preview">
+        <img src="airpl2.jpeg" alt="News Image 2">
+        <h3 class="news-preview-heading">News Headline 2</h3>
+        <div class="news-preview-meta">
+          <span>Author: Somebody</span> -
+          <span>Date: March 8, 2024</span>
+        </div>
+        <p class="news-preview-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget lacus eget nunc tincidunt laoreet. Donec eget lacus eget nunc tincidunt laoreet.</p>
+        <button>Read More</button>
+      </div>
+      <div class="news-preview">
+        <img src="airpl3.jpg" alt="News Image 3">
+        <h3 class="news-preview-heading">News Headline 3</h3>
+        <div class="news-preview-meta">
+          <span>Author: Somebody</span> -
+          <span>Date: March 9, 2024</span>
+        </div>
+        <p class="news-preview-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget lacus eget nunc tincidunt laoreet. Donec eget lacus eget nunc tincidunt laoreet.</p>
+        <button>Read More</button>
+      </div>
+      <div class="news-preview">
+        <img src="airpl4.jpg" alt="News Image 4">
+        <h3 class="news-preview-heading">News Headline 4</h3>
+        <div class="news-preview-meta">
+          <span>Author: Somebody</span> -
+          <span>Date: March 10, 2024</span>
+        </div>
+        <p class="news-preview-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget lacus eget nunc tincidunt laoreet. Donec eget lacus eget nunc tincidunt laoreet.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="nav menu">
+<h3>Navigation Menu</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

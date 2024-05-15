@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Practical 7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+
+        select {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+
+        form button {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            background-color: #00c8ff;
+            color: #fff;
+            border: 1px solid #00c8ff;
+        }
+
+        output {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <script>
+function calculate(num1, operator, num2) {
+ switch(operator) {
+ case '+':
+ return num1 + num2;
+ case '-':
+ return num1 - num2;
+ case '*':
+ return num1 * num2;
+ case '/':
+ if(num2 != 0) {
+ return num1 / num2;
+ } else {
+ return "Error: Division by zero is not allowed.";
+ }
+ default:
+ return "Error: Invalid operator.";
+ }
+}
+function performCalculation() {
+ var num1 = 
+parseFloat(document.getElementById('num1').value);
+ var operator = document.getElementById('operator').value;
+ var num2 = 
+parseFloat(document.getElementById('num2').value);
+ var result = calculate(num1, operator, num2);
+ document.getElementById('result').value = ""
++ result;
+}
+    </script>
+</head>
+</body>
+</html>
+<head> 
+    <!DOCTYPE html>
+<html>
+<head>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <style>
+ 
+    </style>
+</head>
+
+<body>
+    <div class="owl-carousel owl-theme">
+        <div class="item">
+            <div class="slide-content">
+                <h3>Explain “repaint” and “reflow” of the webpage:</h3>
+                <p>Repaint refers to the process of updating the pixels on the screen when some visual aspect of the page changes, without changing the layout. Reflow, on the other hand, involves recalculating the layout of the entire page due to changes in its structure or content. Both processes can affect the performance of the webpage.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="slide-content">
+                <h3>How does JavaScript on the webpage affects the page load speed and performance?</h3>
+                <p>JavaScript can affect page load speed and performance in various ways. If JavaScript files are large or numerous, they can increase the time it takes for the page to load. Additionally, poorly optimized JavaScript code can cause the browser to execute slower, leading to delays in rendering and responsiveness.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="slide-content">
+                <h3>What is “minification” of the script? Why it is useful to minify your scripts?</h3>
+                <p>Minification is the process of removing unnecessary characters from a script (such as white spaces, comments, and line breaks) to reduce its file size. It is useful because smaller file sizes lead to faster downloads and parsing by the browser, improving page load speed and overall performance.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="slide-content">
+                <h3>What is a JS Web Worker and when do we need it?</h3>
+                <p>A JavaScript Web Worker is a mechanism that enables concurrent execution of scripts in the browser, allowing time-consuming tasks to run in the background without blocking the main execution thread. Web Workers are useful when performing tasks such as complex computations, file I/O operations, or network requests that would otherwise cause the UI to become unresponsive.</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="slide-content">
+                <h3>Sources:</h3>
+                <ul>
+                    <li> https://stackforgeeks.com/blog/whats-the-difference-between-reflow-and-repaint</li>
+                    <li> https://medium.com/@seomediaagency/how-javascript-impacts-page-loading-speed-on-mobile-206dcd8b088f</li>
+                    <li> https://www.wallarm.com/what/what-is-minification-and-why-is-it-needed</li>
+                    <li> https://benestudio.co/web-workers-in-javascript-and-when-to-use-them/ </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:true,
+                items: 1 
+            });
+        });
+    </script>
+</body>
+</html>
+
+</head>
+<body>
+    <form>
+        <label for="num1">First number:</label>
+        <input type="number" id="num1">
+
+        <label for="operator">Operator:</label>
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+
+        <label for="num2">Second number:</label>
+        <input type="number" id="num2">
+
+        <button type="button" onclick="performCalculation()">Calculate</button>
+        <button type="reset">Reset</button>
+
+        <label for="result">Result:</label>
+        <output id="result"></output>
+    </form>
+</body>
+</html>

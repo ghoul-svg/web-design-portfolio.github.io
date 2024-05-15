@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practical 5</title>
+  <style>
+  header {
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header nav a {
+    text-decoration: none;
+    color: black;
+    padding: 0 10px;
+  }
+
+  header nav a:hover {
+    background-color: #ddd;
+  }
+  footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+  }
+  ul{
+    text-align: left;
+  }
+  p{
+    font-size: 1.2em;
+  font-weight: 300;
+  padding-right: 20%;
+  }
+  img {
+            width: 300px;
+            height: 170px;
+            float: right;
+        }
+
+ 
+  </style>
+</head>
+<body>
+    <header>
+        <h1>Report</h1>
+    
+        <nav>
+          <a href="#a">a. Box model and box-sizing</a>
+          <a href="#b">b. Clearfix hack</a>
+          <a href="#c">c. Margin collapse</a>
+          <a href="#d">d. Holy Grail layout problem</a>
+          <a href="#e">e. Modern Holy Grail layout techniques</a>
+        </nav>
+      </header>
+
+  <main>
+    <article>
+
+      <h2 id="a"><em>What is a box model in CSS. Give box-sizing property definition</em></h2>
+
+      <p>The box model in CSS is a concept that defines the rectangular box that surrounds every element. It consists of the content, padding, border, and margin of the element.
+         The `box-sizing` property allows you to control how the width and height of an element is calculated, either including or excluding the padding and border.</p>
+         <img src="css_box_model.jpg" alt="css box model">
+         <img src="css box model2.jpg" alt="css box model2">
+
+      <h2 id="b"><em>What is a “clearfix hack” and when does it need to be applied</em></h2>
+
+      <p>The "clearfix hack" is a CSS technique that prevents an element from collapsing when its child elements are floated. 
+        It is needed when you want to create a layout where a parent element contains child elements that are floated side-by-side.</p>
+
+      <h2 id="c"><em>What is a “margin collapse” and what are the use cases for margin: auto and negative margin values</em></h2>
+
+      <p>Margin collapse is a CSS phenomenon that occurs when the margins of two or more adjacent elements collapse into a single margin. 
+        This can happen when the elements are siblings or when they are nested inside each other.</p>
+        <img src="margin_collapse.png" alt="margin_collapse">
+        <img src="mc2.png" alt="margin_collapse2">
+
+      <p>Margin collapse can be used to create certain layout effects, such as centering an element within its parent element. 
+        The `margin: auto` property can be used to center an element horizontally, and negative margin values can be used to create overlapping elements.</p>
+
+      <h2 id="d"><em>What was the problem with achieving Holy Grail layout</em></h2>
+
+      <p>The problem with achieving Holy Grail layout was that it was difficult to create a layout that was both flexible and cross-browser compatible. 
+        The Holy Grail layout is a three-column layout with a fixed-width header and footer, and a fluid-width content area. In the early days of CSS, it was difficult to create this layout using only CSS, as the `float` property did not behave consistently across browsers.</p>
+
+      <h2 id="e"><em>What are the modern ways to achieve Holy Grail layout</em></h2>
+
+      <p>There are several modern ways to achieve Holy Grail layout, including using flexbox, CSS grid, or a CSS framework such as Bootstrap. These techniques provide more flexibility and cross-browser compatibility than the traditional methods.</p>
+
+    </article>
+    <footer>
+        <p>Anasyasiya Yurchuk</p>
+        <p>Web Design</p>
+        <p>21.04.2024</p>
+        <p>Sunday</p>
+        <p>Home</p>
+    
+        <ul>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Box_model">MDN: Box model</a></li>
+          <li><a href="https://css-tricks.com/snippets/css/clear-fix/">CSS Tricks: Clearfix hack</a></li>
+          <li><a href="https://www.w3schools.com/css/css_margin-collapse.asp">W3Schools: Margin collapse</a></li>
+  </main>
+
+</body>
+</html>
